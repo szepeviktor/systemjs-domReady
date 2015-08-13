@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  return new Promise(function(resolve, reject){
+  module.exports = new Promise(function(resolve, reject){
     function retest(){/in/.test(document.readyState) ? setTimeout(retest,9) : resolve()}
     if (/in/.test(document.readyState))
       document.addEventListener ? document.addEventListener('DOMContentLoaded',resolve) : restest();
